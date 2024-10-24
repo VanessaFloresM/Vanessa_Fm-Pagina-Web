@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Hobbies */
+/* Fondo degradado */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #d3bfa8, #8c6954);
+    background-size: 400% 400%;
+    animation: animacionDegradado 5s ease infinite;
+    font-family: Didot;
+}
+
+@keyframes animacionDegradado {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Barra de herramientas */
+.barra-herramientas {
+    background-color: #C2B67C;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.barra-herramientas ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.barra-herramientas li {
+    margin: 0 15px;
+}
+
+.barra-herramientas a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.barra-herramientas a:hover {
+    color: #d3bfa8;
+}
+
+/* Ajuste de margen para el contenido */
+.contenedor {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estilos de la lista desplegable */
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #8c6954;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+h2 {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Estilo de la imagen */
+.imagen {
+    margin-top: 20px;
+}
+
+.imagen img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease;
+    opacity: 1;
+}
+
+.imagen img:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}

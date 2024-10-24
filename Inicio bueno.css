@@ -1,0 +1,107 @@
+/* Fondo degradado con animación */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #d3bfa8, #8c6954);
+    background-size: 400% 400%;
+    animation: animacionDegradado 3s ease infinite;
+    font-family: Georgia;
+}
+
+@keyframes animacionDegradado {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Estilo para la barra de herramientas */
+.barra-herramientas {
+    background-color: #C2B67C;
+    padding: 30px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.barra-herramientas ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.barra-herramientas li {
+    margin: 0 15px;
+}
+
+.barra-herramientas a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.barra-herramientas a:hover {
+    color: #d3bfa8;
+}
+
+/* Ajustes para desplazar el contenido hacia abajo debido a la barra de herramientas fija */
+.contenedor {
+    margin-top: 60px;
+}
+
+/* Estilo para el contenido principal */
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+/* Animación para el texto */
+.contenido-texto {
+    max-width: 500px;
+    margin: 20px;
+    animation: movimientoTexto 3s ease-in-out infinite;
+}
+
+@keyframes movimientoTexto {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.contenido-texto h1 {
+    font-size: 48px;
+    margin: 0;
+    animation: efectoLetra 2s ease-in-out infinite alternate;
+}
+
+.contenido-texto p {
+    font-size: 18px;
+    margin-top: 10px;
+    animation: movimientoTexto 3s ease-in-out infinite;
+}
+
+/* Animación para la imagen */
+.imagen {
+    margin: 20px;
+}
+
+.imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: zoomImagen 4s ease-in-out infinite alternate;
+}
+
+@keyframes zoomImagen {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}

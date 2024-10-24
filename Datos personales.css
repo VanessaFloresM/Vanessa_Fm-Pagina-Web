@@ -1,0 +1,188 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(270deg, #f0e4d7, #e3d4c3, #cbb295, #eae1d0);
+    background-size: 400% 400%;
+    animation: gradientMove 5s ease infinite;
+    color: #333;
+    padding: 0;
+}
+
+/* Animación del degradado de fondo */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Título */
+h1 {
+    font-size: 3em;
+    text-align: center;
+    margin-top: 100px; /* Ajuste para evitar que se encime con la barra de herramientas */
+    margin-bottom: 20px;
+    color: #6d4c41;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideIn 1.5s ease forwards;
+}
+
+/* Animación de entrada para el título */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.contenedor-datos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #eae1d0;
+    transition: transform 0.3s ease;
+}
+
+.contenedor-datos:hover {
+    transform: translateY(-10px); /* Efecto de elevación al pasar el mouse */
+}
+
+.imagen {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.imagen img:hover {
+    transform: scale(1.1); /* Zoom más pronunciado */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.info-personal {
+    flex: 1;
+    background-color: #f5f0e8; /* Fondo un poco más claro */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.info-personal h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #6d4c41;
+}
+
+.info-personal ul {
+    list-style: none;
+}
+
+.info-personal li {
+    margin-bottom: 20px;
+}
+
+details {
+    font-size: 1.2em;
+    color: #6d4c41;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #6d4c41;
+}
+
+summary:hover {
+    color: #8d6e63;
+}
+
+p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Botones estilizados */
+a.button {
+    display: inline-block;
+    background-color: #6d4c41;
+    color: #f5f0e8;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+a.button:hover {
+    background-color: #8d6e63;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contenedor-datos {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .imagen {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+/* Estilo para la barra de herramientas */
+.barra-herramientas {
+    background-color: #C2B67C;
+    padding: 30px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.barra-herramientas ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.barra-herramientas li {
+    margin: 0 15px;
+}
+
+.barra-herramientas a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.barra-herramientas a:hover {
+    color: #d3bfa8;
+}

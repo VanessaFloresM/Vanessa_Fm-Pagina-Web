@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Hobbies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Barra de herramientas -->
+    <nav class="barra-herramientas">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="datos-personales.html">Datos Personales</a></li>
+            <li><a href="estudios.html">Estudios</a></li>
+            <li><a href="horario.html">Horario</a></li>
+            <li><a href="familia.html">Familia</a></li>
+            <li><a href="amigos.html">Amigos</a></li>
+            <li><a href="Contactame.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="contenedor">
+        <h2>Selecciona un hobby:</h2>
+        <select id="hobbySelector" onchange="cambiarContenido()">
+            <option value="pintura">Pintura</option>
+            <option value="lectura">Lectura</option>
+            <option value="videojuegos">Videojuegos</option>
+            <option value="musica">Música</option>
+            <option value="salir">Salir</option>
+        </select>
+
+        <h2 id="tituloHobby">Pintura</h2>
+        <p id="descripcionHobby">Es una forma de expresión en la cual puedo relajarme y disfrutar de la creatividad sin la necesidad de seguir un patrón.</p>
+
+        <div class="imagen">
+            <img id="imagenHobby" src="Pintura tec.jpeg" alt="Imagen de pintura">
+        </div>
+        <p id="textoImagen">Una de las pinturas que hice aquí en el Tecnológico por mi taller de pintura.</p>
+    </div>
+
+    <script>
+        function cambiarContenido() {
+            const hobby = document.getElementById('hobbySelector').value;
+            const titulo = document.getElementById('tituloHobby');
+            const descripcion = document.getElementById('descripcionHobby');
+            const imagen = document.getElementById('imagenHobby');
+            const textoImagen = document.getElementById('textoImagen');
+
+            switch (hobby) {
+                case 'pintura':
+                    titulo.textContent = 'Pintura';
+                    descripcion.textContent = 'Es una forma de expresión en la cual puedo relajarme y disfrutar de la creatividad sin seguir un patrón.';
+                    imagen.src = 'Pintura tec.jpeg';
+                    textoImagen.textContent = 'Una de las pinturas que hice aquí en el Tecnológico por mi taller de pintura.';
+                    break;
+                case 'lectura':
+                    titulo.textContent = 'Lectura';
+                    descripcion.textContent = 'La lectura me permite viajar a diferentes mundos sin salir de casa. Me encanta perderme en una buena historia.';
+                    imagen.src = 'Lectura libro.jpeg';
+                    textoImagen.textContent = 'Uno de mis libros favoritos.';
+                    break;
+                case 'videojuegos':
+                    titulo.textContent = 'Videojuegos';
+                    descripcion.textContent = 'Me encanta jugar videojuegos en mis ratos libres, es una forma divertida de pasar el tiempo.';
+                    imagen.src = 'Videojuegos.jpeg';
+                    textoImagen.textContent = 'Una partida que disfruté mucho jugando con amigos.';
+                    break;
+                case 'musica':
+                    titulo.textContent = 'Música';
+                    descripcion.textContent = 'La música me inspira. Me gusta escuchar diferentes géneros para relajarme o animarme durante el día.';
+                    imagen.src = 'Musica tocadiscos.jpeg';
+                    textoImagen.textContent = 'Escuchando música en mi tocadiscos.';
+                    break;
+                case 'salir':
+                    titulo.textContent = 'Salir';
+                    descripcion.textContent = 'Me gusta salir a caminar, explorar nuevos lugares y disfrutar de la naturaleza.';
+                    imagen.src = 'Salir parque.jpeg';
+                    textoImagen.textContent = 'Un paseo por el parque.';
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
+
